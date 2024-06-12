@@ -7,16 +7,61 @@
   src: url('/fonts/CreamyChalk-PKa4E.ttf') format('truetype');
 }
 
+/* Header styles */
+.header {
+  background-color: #f0f9ff;
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  top: 0%;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+}
+
+/* Logo styles */
+.header img {
+  width: 250px;
+  height: 60px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigation links container */
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+/* Navigation link styles */
+.nav-links a {
+  text-decoration: none;
+  color: #000000;
+  /*font-weight: bold; !* Bold text *!*/
+  transition: color 0.3s ease; /* Smooth transition for color change */
+  position: relative; /* Ensure position relative for underline effect */
+  margin-left: 250px;
+}
+
+/* Hover effect for navigation links */
+.nav-links a:hover {
+  color: #3b82f6;
+  text-decoration: underline; /* Underline on hover */
+}
+
+
 .login {
   border: 2px solid #e8e8e8;
   padding: 15px;
   border-radius: 10px;
   background-color: #212121;
   font-weight: bold;
-  text-align: center;
+
  }
  
- .login:focus {
+ .login:focus-within {
   outline-color: white;
   background-color: #212121;
   color: #e8e8e8;
