@@ -6,3 +6,21 @@
   font-family: 'chalk';
   src: url('/fonts/CreamyChalk-PKa4E.ttf') format('truetype');
 }
+
+.login {
+  border: 2px solid #e8e8e8;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #212121;
+  font-weight: bold;
+  text-align: center;
+ }
+ 
+ .login:focus {
+  outline-color: white;
+  background-color: #212121;
+  color: #e8e8e8;
+  box-shadow: 5px 5px #888888;
+ }
+
+
