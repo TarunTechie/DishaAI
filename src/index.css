@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'chalk';
+  src: url('/fonts/CreamyChalk-PKa4E.ttf') format('truetype');
+}

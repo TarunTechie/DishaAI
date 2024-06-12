@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-      <h1 className='text-3xl font-bold'>DISHA AI</h1>
+      <h1 className='text-3xl font-bold font-chalk bg-black text-white'>DISHA AI</h1>
     </>
   )
 }
