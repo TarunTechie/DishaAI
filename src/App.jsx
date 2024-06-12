@@ -1,12 +1,11 @@
-import { useState } from 'react'
 import './App.css'
+import Header from "./components/header.jsx";
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
+    return (
     <>
-      <h1 className='text-3xl font-bold font-chalk bg-black text-white'>DISHA AI</h1>
+      <Header/>
     </>
   )
 }
