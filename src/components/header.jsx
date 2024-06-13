@@ -23,6 +23,7 @@ function Header() {
                 </button>
             </Link>
         </div>
+        </div>
     );
 }
 
