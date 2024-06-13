@@ -1,7 +1,7 @@
 export default function Footer()
 {
     return(
-            <div className="flex w-screen bg-blue-200 mt-96 p-4 justify-between">
+            <div className="flex w-screen bg-blue-200  p-4 justify-between">
                 <div className="grid gap-4">
                     <h1 className="font-foot underline underline-offset-4 text-3xl text-center">CONTACT US</h1>
                 <span className="flex gap-2">

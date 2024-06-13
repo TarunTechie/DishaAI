@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
+import Footer from "../components/footer"
 
 export default function LoginPage()
 {
@@ -40,6 +41,7 @@ export default function LoginPage()
         <h1 className="font-light text-xl text-white">2024 DISHA v1.2.0.</h1><img src="/icons/copy.svg" className="w-8"/>
         <h1 className="font-light text-xl text-white">2024 All rights reserved</h1>
         </div>
+        <Footer/>
         </div>
     )
 }
