@@ -33,7 +33,7 @@
     flex-grow: 1;
     justify-content: flex-end;
     transition: justify-content 0.3s ease;
-    margin: 0 2rem;
+    margin: 0 1.5rem;
 }
 
 /* Navigation link styles */
@@ -51,9 +51,11 @@
     text-decoration: underline;
 }
 
-/* Header buttons container */
-.header-buttons {
-    display: flex;
+.SEP {
+    margin: 0 0.5rem 0 0;
+}
+.LOGIN {
+    margin: 0 0 0 1rem;
 }
 
 .login {
