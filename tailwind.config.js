@@ -7,7 +7,9 @@ export default {
   theme: {
     extend: {
       fontFamily:{
-        chalk:['chalk']
+        chalk:['chalk'],
+        header:['header'],
+        foot:['foot']
       }
     },
   },

@@ -19,9 +19,10 @@ export default function LoginPage()
         }
     }
     return(
-        <div className="grid justify-center items-center bg-blue-200 h-screen w-screen">
-            <Link to="/"><img src="/images/logo.png"className="mx-auto"/></Link>
-            <div className="grid p-10 justify-center items-center gap-2 h-fit w-fit bg-[#212121] border-8 border-orange-800 rounded-xl">
+        <div className="grid gap-10 bg-blue-200 h-screen w-screen">
+            <Link to="/"><img src="/images/logo.png"className="mx-auto p-6"/></Link>
+        <div className="grid justify-center items-center w-screen">
+            <div className="grid p-10 justify-center items-center gap-2 bg-[#212121] border-8 w-fit border-orange-800 rounded-xl">
                 <h1 className="font-chalk text-white text-center text-6xl p-2">LOGIN</h1>
                 <div className="grid gap-4 m-6">
                 <input type="text" className="login" placeholder="Username/Email"/>
@@ -33,6 +34,12 @@ export default function LoginPage()
                 LOGIN</button>
                 </div>
             </div>
+        </div>
+        <div className="flex mx-auto gap-2 bg-blue-700 w-screen justify-center py-5">
+        <h1 className="font-light text-xl text-white">Copyright</h1><img src="/icons/copy.svg" className="w-8"/>
+        <h1 className="font-light text-xl text-white">2024 DISHA v1.2.0.</h1><img src="/icons/copy.svg" className="w-8"/>
+        <h1 className="font-light text-xl text-white">2024 All rights reserved</h1>
+        </div>
         </div>
     )
 }

@@ -6,7 +6,14 @@
   font-family: 'chalk';
   src: url('/fonts/CreamyChalk-PKa4E.ttf') format('truetype');
 }
-
+@font-face {
+  font-family: 'header';
+  src: url('/fonts/FeelingSoon-1GVr0.otf') format('opentype');
+}
+@font-face {
+  font-family: 'foot';
+  src: url('/fonts/CrocodileFeetDemoRegular-GzDg.otf') format('opentype');
+}
 /* Header styles */
 .header {
   background-color: #f0f9ff;
@@ -58,7 +65,7 @@
   border-radius: 10px;
   background-color: #212121;
   font-weight: bold;
-
+  color: #e8e8e8;
  }
  
  .login:focus-within {
@@ -68,4 +75,11 @@
   box-shadow: 5px 5px #888888;
  }
 
-
+.social
+{
+  @apply w-8 rounded-lg bg-white p-2 m-2
+}
+.social:hover
+{
+  scale: 1.2;  
+}

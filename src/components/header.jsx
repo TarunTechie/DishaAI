@@ -4,7 +4,7 @@ function Header() {
     return (
         <div className="header">
             <img src="/images/logo.png" alt="Disha AI logo"/>
-            <div className="nav-links space-x-6"> {/* Added space-x-4 class */}
+            <div className="nav-links space-x-6 font-header"> {/* Added space-x-4 class */}
                 <a href="#home">HOME</a>
                 <a href="#genesis">Genesis of DISHA AI</a>
                 <a href="#differentiator">DISHA AI Differentiator</a>
