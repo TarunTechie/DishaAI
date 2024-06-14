@@ -37,6 +37,7 @@
 .nav-links {
     display: flex;
     flex-grow: 1;
+    align-items: center;
     justify-content: flex-end;
     transition: justify-content 0.3s ease;
     margin: 0 1.5rem;
@@ -71,12 +72,6 @@
   background-color: #212121;
   font-weight: bold;
   color: #e8e8e8;
-    border: 2px solid #e8e8e8;
-    padding: 15px;
-    border-radius: 10px;
-    background-color: #212121;
-    font-weight: bold;
-
  }
  
 .login:focus-within {
@@ -86,11 +81,3 @@
     box-shadow: 5px 5px #888888;
 }
 
-.social
-{
-  @apply w-8 rounded-lg bg-white p-2 m-2
-}
-.social:hover
-{
-  scale: 1.2;  
-}
