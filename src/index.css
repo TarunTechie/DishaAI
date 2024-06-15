@@ -61,19 +61,20 @@
 .SEP {
     margin: 0 0.5rem 0 0;
 }
+
 .LOGIN {
     margin: 0 0 0 1rem;
 }
 
 .login {
-  border: 2px solid #e8e8e8;
-  padding: 15px;
-  border-radius: 10px;
-  background-color: #212121;
-  font-weight: bold;
-  color: #e8e8e8;
- }
- 
+    border: 2px solid #e8e8e8;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #212121;
+    font-weight: bold;
+    color: #e8e8e8;
+}
+
 .login:focus-within {
     outline-color: white;
     background-color: #212121;
@@ -81,3 +82,14 @@
     box-shadow: 5px 5px #888888;
 }
 
+/* Specific Footer Styling */
+.flex.mx-auto.gap-2.bg-blue-700.w-screen.justify-center.py-5 {
+    background-color: #1c1c1c;
+    color: #e8e8e8;
+    padding: 20px 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1rem;
+    /*font-weight: normal; !* Set font to normal weight *!*/
+}
