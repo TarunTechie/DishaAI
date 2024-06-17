@@ -64,15 +64,15 @@ function Footer() {
                 </ul>
             </div>
             <div className="footer-links">
-                <a href="/" className="text-gray-600 hover:text-gray-900">About Us</a>
-                <a href="/about" className="text-gray-600 hover:text-gray-900">Privacy Policy</a>
-                <a href="/contact" className="text-gray-600 hover:text-gray-900">Contact Us</a>
+                <a href="/" className=" text-gray-600 hover:text-gray-900">About Us</a>
+                <a href="/about" className=" text-gray-600 hover:text-gray-900">Privacy Policy</a>
+                <a href="/contact" className=" text-gray-600 hover:text-gray-900">Contact Us</a>
             </div>
 
             <div className="footer-links">
-                <a href="/services" className="text-gray-600 hover:text-gray-900">Terms & Conditions</a>
-                <a href="/services" className="text-gray-600 hover:text-gray-900">Refunds & Cancellations</a>
-                <a href="/services" className="text-gray-600 hover:text-gray-900">Terms & Conditions</a>
+                <a href="/services" className=" text-gray-600 hover:text-gray-900">Terms & Conditions</a>
+                <a href="/services" className=" text-gray-600 hover:text-gray-900">Refunds & Cancellations</a>
+                <a href="/services" className=" text-gray-600 hover:text-gray-900">Terms & Conditions</a>
             </div>
 
             <div className="footer-copyright">

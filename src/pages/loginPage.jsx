@@ -16,7 +16,7 @@ export default function LoginPage() {
     }
 
     return (
-        <div className="grid gap-10 bg-blue-200 h-screen w-screen">
+        <div className="grid  bg-blue-200 h-screen w-screen">
             <Link to="/"><img src="/images/logo.png" className="mx-auto p-6" alt="Logo" /></Link>
             <div className="grid justify-center items-center w-screen">
                 <div className="grid p-10 justify-center items-center gap-2 bg-[#212121] border-8 w-fit border-orange-800 rounded-xl">
