@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 function Header() {
     return (
-        <div className="header">
+        <div className="header ">
             <img src="/images/logo.png" alt="Disha AI logo"/>
             <div className="nav-links space-x-6 font-header">
             <div className="nav-links">
