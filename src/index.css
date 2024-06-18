@@ -14,6 +14,10 @@
   font-family: 'foot';
   src: url('/fonts/CrocodileFeetDemoRegular-GzDg.otf') format('opentype');
 }
+@font-face {
+  font-family: 'heading';
+  src: url('/fonts/SalisburyBold-PVZXr.ttf') format('truetype');
+}
 
 /* Header styles */
 .header {
@@ -162,3 +166,8 @@
     border: 1px solid #ff7244;
     color: #ff7244;
   }
+
+@media all and (max-width: 500px)
+{
+  
+}

@@ -9,7 +9,8 @@ export default {
       fontFamily:{
         chalk:['chalk'],
         header:['header'],
-        foot:['foot']
+        foot:['foot'],
+        heading:['heading']
       }
     },
   },
