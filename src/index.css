@@ -24,7 +24,7 @@
     background-color: #ffffffad;
     top: 0;
     width: 100%;
-    height: 100px;
+    height: fit-content;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -32,9 +32,10 @@
 }
 
 /* Logo styles */
-.header img {
+.headerimg{
     width: 250px;
     height: 60px;
+    padding-right: 20px;
 }
 
 /* Navigation links container */
@@ -42,9 +43,16 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    transition: justify-content 0.3s ease;
 }
-
+.nav-btn
+{
+  display: flex;
+  align-items: center;
+}
+.nav-btn button
+{
+  @apply ml-4 cursor-pointer transition-all bg-blue-500 text-white px-8 h-10 rounded-lg border-blue-600 border-b-[4px] hover:brightness-110 hover:-translate-y-[1px] hover:border-b-[6px] active:border-b-[2px] active:brightness-90 active:translate-y-[2px]
+}
 /* Navigation link styles */
 .nav-links a {
     text-decoration: none;
@@ -120,6 +128,7 @@
     font-weight: bold;
     transition: all 0.2s ease-in-out;
     border-left: 1px solid transparent;
+
   }
   
   .reach-container .reach .input:focus {
@@ -191,7 +200,20 @@
   transform: rotateY(180deg);
 }
 
+.navall
+{
+  display: flex;
+}
 @media all and (max-width: 500px)
 {
-  
+  .header
+  {
+    display: grid;
+  }
+  .nav-links
+  {
+    display: flex;
+    width: 100vw;
+    margin:0px;
+  }
 }

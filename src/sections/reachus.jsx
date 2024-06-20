@@ -3,7 +3,7 @@ export default function ReachUs()
     return(
         <div className="flex justify-center">
         <div className="reach-container">
-                <span className="text-4xl text-white font-chalk">REACH US</span>
+                <h1 className="text-4xl text-white font-chalk text-center">REACH US</h1>
             <div className="reach p-4">
                 <input placeholder="Name" type="text" className="input"/>
                 <input placeholder="Email" id="mail" type="email" className="input"/>
