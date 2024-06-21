@@ -1,0 +1,67 @@
+/* PrimeMinister page styles */
+.prime-minister-container {
+    background-color: #002c46;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    padding: 1rem;
+}
+
+.prime-minister-content {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    height: 100%;
+}
+
+.prime-minister-text {
+    flex: 0.9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.prime-minister-text p {
+    font-size: 1rem;
+    color: rgba(236, 234, 233, 0.9);
+    margin-bottom: 1rem;
+}
+
+.prime-minister-text h1 {
+    font-size: 1.85rem;
+    font-weight: 800;
+    line-height: 1.3;
+    letter-spacing: 0.08em;
+    margin-bottom: 2rem;
+}
+
+
+.learn-more-button {
+    background-color: #ffffff;
+    color: #002c46;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.learn-more-button:hover {
+    background-color: #f0f0f0;
+}
+
+.prime-minister-video {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 2.5rem;
+}
+
+.prime-minister-video iframe {
+    width: 600px;
+    height: 300px;
+}
