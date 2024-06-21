@@ -7,16 +7,16 @@
     src: url('/fonts/CreamyChalk-PKa4E.ttf') format('truetype');
 }
 @font-face {
-  font-family: 'header';
-  src: url('/fonts/FeelingSoon-1GVr0.otf') format('opentype');
+    font-family: 'header';
+    src: url('/fonts/FeelingSoon-1GVr0.otf') format('opentype');
 }
 @font-face {
-  font-family: 'foot';
-  src: url('/fonts/CrocodileFeetDemoRegular-GzDg.otf') format('opentype');
+    font-family: 'foot';
+    src: url('/fonts/CrocodileFeetDemoRegular-GzDg.otf') format('opentype');
 }
 @font-face {
-  font-family: 'heading';
-  src: url('/fonts/SalisburyBold-PVZXr.ttf') format('truetype');
+    font-family: 'heading';
+    src: url('/fonts/SalisburyBold-PVZXr.ttf') format('truetype');
 }
 
 /* Header styles */
@@ -46,12 +46,12 @@
 }
 .nav-btn
 {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 .nav-btn button
 {
-  @apply ml-4 cursor-pointer transition-all bg-blue-500 text-white px-8 h-10 rounded-lg border-blue-600 border-b-[4px] hover:brightness-110 hover:-translate-y-[1px] hover:border-b-[6px] active:border-b-[2px] active:brightness-90 active:translate-y-[2px]
+    @apply ml-4 cursor-pointer transition-all bg-blue-500 text-white px-8 h-10 rounded-lg border-blue-600 border-b-[4px] hover:brightness-110 hover:-translate-y-[1px] hover:border-b-[6px] active:border-b-[2px] active:brightness-90 active:translate-y-[2px]
 }
 /* Navigation link styles */
 .nav-links a {
@@ -100,24 +100,24 @@
     z-index: -1;
 }
 
-  .reach-container {
+.reach-container {
     max-width: 700px;
     margin: 30px;
     background-color: #212121;
     padding: 30px;
     border-left: 5px solid #ff7244;
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
-  }
+}
 
-  .heading {
+.heading {
     display: block;
     color: white;
     font-size: 1.5rem;
     font-weight: 800;
     margin-bottom: 20px;
-  }
+}
 
-  .reach-container .reach .input {
+.reach-container .reach .input {
     color: #fff;
     width: 100%;
     background-color: #002733;
@@ -129,13 +129,13 @@
     transition: all 0.2s ease-in-out;
     border-left: 1px solid transparent;
 
-  }
+}
 
-  .reach-container .reach .input:focus {
+.reach-container .reach .input:focus {
     border-left: 5px solid #ff7244;
-  }
+}
 
-  .reach-container .reach .textarea {
+.reach-container .reach .textarea {
     width: 100%;
     padding: 10px;
     border: none;
@@ -148,18 +148,18 @@
     margin-bottom: 20px;
     border-left: 1px solid transparent;
     transition: all 0.2s ease-in-out;
-  }
+}
 
-  .reach-container .reach .textarea:focus {
+.reach-container .reach .textarea:focus {
     border-left: 5px solid #ff7244;
-  }
+}
 
-  .reach-container .reach .button-container {
+.reach-container .reach .button-container {
     display: flex;
     justify-content: center;
-  }
+}
 
-  .reach-container .reach .button-container .send-button {
+.reach-container .reach .button-container .send-button {
     flex-basis: 70%;
     background: #ff7244;
     padding: 10px;
@@ -168,52 +168,52 @@
     font-weight: bold;
     border: 1px solid transparent;
     transition: all 0.2s ease-in-out;
-  }
+}
 
-  .reach-container .reach .button-container .send-button:hover {
+.reach-container .reach .button-container .send-button:hover {
     background: transparent;
     border: 1px solid #ff7244;
     color: #ff7244;
-  }
+}
 
-  /* styles.css */
+/* styles.css */
 .perspective {
-  perspective: 1000px;
+    perspective: 1000px;
 }
 
 .founder {
-  transform-style: preserve-3d;
-  transition: all ease 1s;
+    transform-style: preserve-3d;
+    transition: all ease 1s;
 }
 
 .founder:hover {
-  transform: rotateY(180deg);
+    transform: rotateY(180deg);
 }
 
 .founderf,
 .founderb {
-  backface-visibility: hidden;
-  transform: rotateY(0deg);
+    backface-visibility: hidden;
+    transform: rotateY(0deg);
 }
 
 .founderb {
-  transform: rotateY(180deg);
+    transform: rotateY(180deg);
 }
 
 .navall
 {
-  display: flex;
+    display: flex;
 }
 @media all and (max-width: 500px)
 {
-  .header
-  {
-    display: grid;
-  }
-  .nav-links
-  {
-    display: flex;
-    width: 100vw;
-    margin:0px;
-  }
+    .header
+    {
+        display: grid;
+    }
+    .nav-links
+    {
+        display: flex;
+        width: 100vw;
+        margin:0px;
+    }
 }

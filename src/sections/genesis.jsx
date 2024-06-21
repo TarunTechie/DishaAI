@@ -26,7 +26,7 @@ export default function Genesis() {
     }, [isLoaded]);
 
     return (
-        <div className="genesis-container">
+        <div className="genesis-container bg-blue-900/10">
             <div className="genesis-content">
                 <img
                     src="/images/Genesis.png"
@@ -34,7 +34,7 @@ export default function Genesis() {
                     className={`genesis-image ${isLoaded ? 'loaded' : ''}`}
                     ref={imageRef}
                 />
-                <div className="genesis-text">
+                <div className="genesis-text bg-white/40 rounded-xl md:bg-white/5 md:backdrop-blur">
                     <h1 className="genesis-heading">Genesis of DISHAᴬᴵ</h1>
                     <p className="genesis-paragraph">
                         The last NEP changes happened 28 years ago.
