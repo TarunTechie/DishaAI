@@ -1,12 +1,39 @@
-import React from 'react';
-import "./genesis.css"
-
+import React, { useEffect, useRef, useState } from 'react';
+import './genesis.css';
 
 export default function Genesis() {
+    const imageRef = useRef(null);
+    const [isLoaded, setIsLoaded] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (!isLoaded && imageRef.current) {
+                const elementTop = imageRef.current.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+
+                if (elementTop < windowHeight * 0.75) {
+                    setIsLoaded(true);
+                    imageRef.current.classList.add('loaded');
+                }
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [isLoaded]);
+
     return (
         <div className="genesis-container">
             <div className="genesis-content">
-                <img src="/images/Genesis.png" alt="Genesis" className="genesis-image"/>
+                <img
+                    src="/images/Genesis.png"
+                    alt="Genesis"
+                    className={`genesis-image ${isLoaded ? 'loaded' : ''}`}
+                    ref={imageRef}
+                />
                 <div className="genesis-text">
                     <h1 className="genesis-heading">Genesis of DISHAᴬᴵ</h1>
                     <p className="genesis-paragraph">
