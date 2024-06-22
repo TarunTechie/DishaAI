@@ -1,7 +1,61 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './NEPPolicy.css';
 
 const NEPPolicy = () => {
+    useEffect(() => {
+        const handleScroll = () => {
+            const sun = document.querySelector('.sun');
+            const orbitLines = document.querySelectorAll('.orbit-line');
+            const planets = document.querySelectorAll('.planet');
+            const descriptions = document.querySelectorAll('.orbit-sar-desc, .orbit-sap-desc, .orbit-sep-desc');
+
+            // Animate sun size and opacity
+            if (sun && isElementInViewport(sun)) {
+                sun.style.opacity = '1';
+                sun.style.transform = 'translate(-50%, -50%) scale(1)';
+            }
+
+            // Animate orbit lines opacity
+            orbitLines.forEach(orbitLine => {
+                if (isElementInViewport(orbitLine) && orbitLine.style.opacity !== '1') {
+                    orbitLine.style.opacity = '1';
+                }
+            });
+
+            // Animate planets opacity
+            planets.forEach(planet => {
+                if (isElementInViewport(planet) && planet.style.opacity !== '1') {
+                    planet.style.opacity = '1';
+                }
+            });
+
+            // Animate descriptions opacity and position
+            descriptions.forEach(description => {
+                if (isElementInViewport(description) && description.style.opacity !== '1') {
+                    description.style.opacity = '1';
+                    description.style.transform = 'translate(-50%, -50%) scale(1)';
+                }
+            });
+        };
+
+        const isElementInViewport = (el) => {
+            const rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        handleScroll(); // Trigger once on initial load
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
         <div className="nep-policy-container">
             <h1>Holistic Student Assessment Program (HSAP)</h1>
