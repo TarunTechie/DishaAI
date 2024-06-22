@@ -38,9 +38,8 @@ export default function PrimeMinister() {
                 <div className={`prime-minister-text`} ref={primeMinisterTextRef}>
                     <p>Prime minister's vision as DISHAᴬᴵ’s mission</p>
                     <h1>
-                        As a mission-driven organization,
-                        we're relentlessly pursuing our vision of a world where every learner can access education to
-                        unlock their potential, without the barriers of cost or location.
+                        The new NEP Policy introduces AI to track student progress and guide career choices, alongside younger vocational standards, major-minor subjects, flexible 4-year programs, and a national aptitude test.
+                        {/*The new NEP Policy introduces AI software to track student progress through school and make optimal career choices, along with vocational subjects at younger standards, major-minor subjects, Multiple Entry and Exits in a 4 year Graduate program, and a national aptitude test.*/}
                     </h1>
                     <Link to="/genesis">
                         <button className={`learn-more-button`} ref={primeMinisterButtonRef}>
@@ -50,7 +49,7 @@ export default function PrimeMinister() {
                 </div>
                 <div className={`prime-minister-video`} ref={primeMinisterIframeRef}>
                     <iframe
-                        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                        src="https://www.youtube.com/embed/4tSX7Y7b91c?si=Cdhu77nGjhwPX50R"
                         title="Prime Minister's Vision Video"
                     ></iframe>
                 </div>
