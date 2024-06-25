@@ -36,7 +36,7 @@ export default function PrimeMinister() {
         <div className="prime-minister-container">
             <div className="prime-minister-content">
                 <div className={`prime-minister-text`} ref={primeMinisterTextRef}>
-                    <p>Prime minister's vision as DISHAᴬᴵ’s mission</p>
+                    <p>Prime minister's vision as DISHAᴬᴵ mission</p>
                     <h1>
                         As a mission-driven organization,
                         we're relentlessly pursuing our vision of a world where every learner can access education to
@@ -49,10 +49,7 @@ export default function PrimeMinister() {
                     </Link>
                 </div>
                 <div className={`prime-minister-video`} ref={primeMinisterIframeRef}>
-                    <iframe
-                        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                        title="Prime Minister's Vision Video"
-                    ></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/6Y_ar5xKS28?si=thAP2ttd4Aa8JfEv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
         </div>

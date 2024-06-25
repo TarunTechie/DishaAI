@@ -4,7 +4,7 @@ import ParticlesComponent from '../components/particles';
 
 export default function Landing() {
     return (
-        <div className='flex h-screen bg-blue-900/10 overflow-clip'>
+        <div className='flex h-screen bg-blue-900/10 overflow-clip w-full'>
             <ParticlesComponent id="par"/>
             <div className='flex items-center'>
                 <h1 className='text-lg font-bold font-mono mx-auto bg-white/40 p-8 rounded-xl m-4 md:bg-white/5 md:backdrop-blur md:text-2xl md:w-1/2'>

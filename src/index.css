@@ -204,6 +204,11 @@
 {
     display: flex;
 }
+
+.section
+{
+    @apply text-center text-3xl md:text-5xl font-extrabold text-[#002c46] mb-8
+}
 @media all and (max-width: 500px)
 {
     .header
