@@ -1,4 +1,4 @@
-export default function ReviewCard({text,name})
+export default function AppreciationsCard({text,name})
 {
     return(
       <div className="w-fit m-8">

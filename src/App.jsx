@@ -7,6 +7,7 @@ import ReachUs from './sections/reachus.jsx';
 import Genesis from './sections/genesis.jsx';
 import PrimeMinister from './sections/primeMinister.jsx';
 import NEPPolicy from './sections/NEPPolicy.jsx';
+import Appreciations from './sections/appreciations.jsx';
 
 function App() {
     return (
@@ -15,8 +16,8 @@ function App() {
             <Landing/>
             <Genesis/>
             <PrimeMinister/>
-            <Review/>
             <NEPPolicy/>
+            <Appreciations/>
             <Founder/>
             <ReachUs/>
             <Footer/>
