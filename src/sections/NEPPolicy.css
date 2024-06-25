@@ -1,0 +1,186 @@
+/* NEP Policy page styles */
+.nep-policy-container {
+    padding: 2rem;
+    background-color: rgba(249, 249, 249, 0.6);
+    height: 100vh;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    margin: 4rem auto;
+
+}
+
+.nep-policy-container h1 {
+    padding-top: 10px;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #002C46;
+}
+
+.solar-system {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    left: -100px;
+}
+
+.sun {
+    background-color: #E99E2D;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0); /* Initial scale to 0 */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 2s ease, transform 1s ease;
+}
+
+.orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.orbit-line {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1.5px solid rgba(0, 0, 0, 0.5); /* Changed border style to solid */
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.orbit-line-1 {
+    width: 350px;
+    height: 350px;
+}
+
+.orbit-line-2 {
+    width: 500px;
+    height: 500px;
+}
+
+.orbit-line-3 {
+    width: 650px;
+    height: 650px;
+}
+
+.planet {
+    background-color: #002C46;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+
+}
+
+.planet h3 {
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+}
+
+.rocket {
+    width: 30px;
+    height: 30px;
+}
+
+.planet-description p {
+    font-size: 0.9rem;
+    line-height: 1.25;
+    margin: 0;
+    max-width: 350px; /* Adjust as needed */
+    font-weight: 600;
+}
+
+.orbit {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-origin: 0 50%;
+    z-index: 1;
+}
+
+
+/*SAR*/
+.orbit-sar {
+    transform: translate(135px, -100px);
+}
+
+.orbit-sar-desc .rocket{
+     transform: translate(357px, -140px);
+}
+
+.orbit-sar-desc .planet-description{
+     transform: translate(365px, -150px);
+}
+
+.orbit-sar-desc {
+    opacity: 0; /* Initially hidden */
+    transform: translateX(0px); /* Initially positioned to the right */
+    transition: opacity 1s ease, transform 1s ease; /* Transition for opacity and transform */
+}
+
+
+/*SAP*/
+.orbit-sap {
+    transform: translate(250px, 30px);
+}
+
+.orbit-sap-desc .rocket{
+    transform: translate(475px, -10px);
+}
+
+.orbit-sap-desc .planet-description{
+    transform: translate(485px, -20px);
+}
+
+.orbit-sap-desc {
+    opacity: 0; /* Initially hidden */
+    transform: translateX(0px); /* Initially positioned to the right */
+    transition: opacity 1s ease, transform 1s ease; /* Transition for opacity and transform */
+}
+
+
+/*SEP*/
+.orbit-sep {
+    transform: translate(260px, 200px);
+}
+
+.orbit-sep-desc .rocket{
+    transform: translate(485px, 160px);
+}
+
+.orbit-sep-desc .planet-description{
+    transform: translate(495px, 155px);
+}
+
+.orbit-sep-desc {
+    opacity: 0; /* Initially hidden */
+    transform: translateX(0); /* Initially positioned to the right */
+    transition: opacity 1s ease, transform 1s ease; /* Transition for opacity and transform */
+}

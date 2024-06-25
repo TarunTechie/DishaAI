@@ -6,8 +6,7 @@ import Landing from './sections/landing.jsx';
 import ReachUs from './sections/reachus.jsx';
 import Genesis from './sections/genesis.jsx';
 import PrimeMinister from './sections/primeMinister.jsx';
-import Hsap from './sections/hsap.jsx';
-import Review from './sections/review.jsx';
+import NEPPolicy from './sections/NEPPolicy.jsx';
 
 function App() {
     return (
@@ -17,6 +16,7 @@ function App() {
             <Genesis/>
             <PrimeMinister/>
             <Review/>
+            <NEPPolicy/>
             <Founder/>
             <ReachUs/>
             <Footer/>
