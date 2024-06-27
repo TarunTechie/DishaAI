@@ -1,20 +1,6 @@
-import {useRef,useEffect,useState} from 'react'
-
 export default function FounderCard({image,name,exp,abt,occ}) {
-    const myRef=useRef()
-    useEffect(()=>{
-      const observer= new IntersectionObserver((entries)=>{
-       console.log(entries.forEach((entry)=>{
-        if(entry.isIntersecting)
-          {
-            console.log(entry)
-          }
-      }))
-      })
-      observer.observe(myRef.current)
-    },[])
     return (
-      <div className="w-full md:w-1/3 lg:w-1/5 h-96  m-4 relative founder perspective  rounded-xl" ref={myRef}>
+      <div className="w-full md:w-1/3 lg:w-1/5 h-96  m-4 relative founder perspective  rounded-xl">
         <div className="founderf absolute inset-0 grid  rounded-lg bg-[url('/images/card.jpg')] bg-cover">
           <div className="grid justify-center bg-gradient-to-r from-blue-500 rounded-lg">
             <img src={image} className="w-44 h-44 rounded-full mt-8 shadow-lg shadow-black border-4 border-white" />
