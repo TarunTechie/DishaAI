@@ -68,7 +68,7 @@ const NEPPolicy = () => {
                     </div>
                 </div>
                 <div className="orbit orbit-sar-desc">
-                    <img className="rocket" src="/images/RocketIcon.png" alt="RocketIcon" />
+                    <img className="rocket" src="/images/Rocketicon.png" alt="RocketIcon" />
                     <div className="planet-description">
                         <p>Student Assessment Report (SAR): Based On Our Decades of Research on Assessments.</p>
                     </div>
@@ -80,7 +80,7 @@ const NEPPolicy = () => {
                     </div>
                 </div>
                 <div className="orbit orbit-sap-desc">
-                    <img className="rocket" src="/images/RocketIcon.png" alt="RocketIcon" />
+                    <img className="rocket" src="/images/Rocketicon.png" alt="RocketIcon" />
                     <div className="planet-description">
                         <p>Student Academic Performance (SAP): Yearly Student Academic Performance.</p>
                     </div>
@@ -92,7 +92,7 @@ const NEPPolicy = () => {
                     </div>
                 </div>
                 <div className="orbit orbit-sep-desc">
-                    <img className="rocket" src="/images/RocketIcon.png" alt="RocketIcon" />
+                    <img className="rocket" src="/images/Rocketicon.png" alt="RocketIcon" />
                     <div className="planet-description">
                         <p>Student Engagement Platform (SEP): Captures Students Experiences, Observations and Interests In A Seamless Manner on a Regular Basis.</p>
                     </div>

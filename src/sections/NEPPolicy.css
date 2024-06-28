@@ -24,6 +24,7 @@
     width: 100%;
     height: 100%;
     left: -100px;
+    margin-top: 3rem;
 }
 
 .sun {
@@ -184,3 +185,305 @@
     transform: translateX(0); /* Initially positioned to the right */
     transition: opacity 1s ease, transform 1s ease; /* Transition for opacity and transform */
 }
+
+@media (min-width: 1050px) and (max-width: 1200px) {
+    .nep-policy-container {
+        margin: 3rem auto; /* Adjusted margin */
+    }
+
+    .nep-policy-container h1 {
+        font-size: 2.75rem;
+    }
+
+    .solar-system {
+        margin-top: -1rem;
+        margin-left: -1rem;
+
+    }
+
+    .sun {
+        width: 130px; /* Reduced sun size */
+        height: 130px;
+        line-height: 130px;
+        font-size: 1.3rem; /* Adjusted font size */
+    }
+
+    .orbit-line-1 {
+        width: 320px; /* Reduced orbit line size */
+        height: 320px;
+    }
+
+    .orbit-line-2 {
+        width: 460px; /* Reduced orbit line size */
+        height: 460px;
+    }
+
+    .orbit-line-3 {
+        width: 600px; /* Reduced orbit line size */
+        height: 600px;
+    }
+
+    .planet {
+        width: 70px; /* Reduced planet size */
+        height: 70px;
+        padding: 8px; /* Adjusted padding */
+    }
+
+    .planet h3 {
+        font-size: 0.9rem; /* Adjusted planet heading size */
+    }
+
+    .rocket {
+        width: 25px; /* Reduced rocket icon size */
+        height: 25px;
+    }
+
+    .planet-description p {
+        font-size: 0.8rem; /* Adjusted planet description font size */
+        max-width: 300px; /* Adjusted max-width */
+    }
+
+
+
+    /*SAR*/
+    .orbit-sar {
+        transform: translate(125px, -100px);
+    }
+
+    .orbit-sar-desc .rocket{
+        transform: translate(317px, -140px);
+    }
+
+    .orbit-sar-desc .planet-description{
+        transform: translate(325px, -150px);
+    }
+
+
+
+    /*SAP*/
+    .orbit-sap {
+        transform: translate(230px, 30px);
+    }
+
+    .orbit-sap-desc .rocket{
+        transform: translate(425px, -10px);
+    }
+
+    .orbit-sap-desc .planet-description{
+        transform: translate(435px, -20px);
+    }
+
+
+
+    /*SEP*/
+    .orbit-sep {
+        transform: translate(230px, 200px);
+    }
+
+    .orbit-sep-desc .rocket{
+        transform: translate(425px, 160px);
+    }
+
+    .orbit-sep-desc .planet-description{
+        transform: translate(435px, 165px);
+    }
+
+}
+
+@media (min-width: 850px) and (max-width: 1050px) {
+    .sun {
+        width: 110px; /* Further reduced sun size */
+        height: 110px;
+        line-height: 110px;
+        font-size: 1.1rem; /* Adjusted font size */
+    }
+
+    .solar-system {
+        margin-top: -6rem;
+
+    }
+
+    .nep-policy-container h1 {
+        font-size: 2.25rem;
+    }
+
+    .orbit-line-1 {
+        width: 280px; /* Further reduced orbit line size */
+        height: 280px;
+    }
+
+    .orbit-line-2 {
+        width: 400px; /* Further reduced orbit line size */
+        height: 400px;
+    }
+
+    .orbit-line-3 {
+        width: 520px; /* Further reduced orbit line size */
+        height: 520px;
+    }
+
+    .planet {
+        width: 60px; /* Further reduced planet size */
+        height: 60px;
+        padding: 6px; /* Adjusted padding */
+    }
+
+    .planet h3 {
+        font-size: 0.8rem; /* Adjusted planet heading size */
+    }
+
+    .rocket {
+        width: 20px; /* Further reduced rocket icon size */
+        height: 20px;
+    }
+
+    .planet-description p {
+        font-size: 0.7rem; /* Further adjusted planet description font size */
+        max-width: 280px; /* Further adjusted max-width */
+    }
+
+
+    /*SAR*/
+    .orbit-sar {
+        transform: translate(95px, -100px);
+    }
+
+    .orbit-sar-desc .rocket{
+        transform: translate(267px, -135px);
+    }
+
+    .orbit-sar-desc .planet-description{
+        transform: translate(275px, -145px);
+    }
+
+
+
+    /*SAP*/
+    .orbit-sap {
+        transform: translate(198px, 30px);
+    }
+
+    .orbit-sap-desc .rocket{
+        transform: translate(375px, -5px);
+    }
+
+    .orbit-sap-desc .planet-description{
+        transform: translate(385px, -15px);
+    }
+
+
+
+    /*SEP*/
+    .orbit-sep {
+        transform: translate(170px, 200px);
+    }
+
+    .orbit-sep-desc .rocket{
+        transform: translate(350px, 165px);
+    }
+
+    .orbit-sep-desc .planet-description{
+        transform: translate(360px, 165px);
+    }
+}
+
+@media (max-width: 850px) {
+    .sun {
+        width: 90px; /* Reduced sun size */
+        height: 90px;
+        line-height: 90px;
+        font-size: 1rem; /* Adjusted font size */
+    }
+
+    .solar-system {
+        margin-top: -8rem;
+        margin-left: 5rem;
+    }
+
+
+    .nep-policy-container h1 {
+        font-size: 1.75rem;
+    }
+
+    .orbit-line-1 {
+        width: 240px; /* Reduced orbit line size */
+        height: 240px;
+    }
+
+    .orbit-line-2 {
+        width: 340px; /* Reduced orbit line size */
+        height: 340px;
+    }
+
+    .orbit-line-3 {
+        width: 440px; /* Reduced orbit line size */
+        height: 440px;
+    }
+
+    .planet {
+        width: 50px; /* Reduced planet size */
+        height: 50px;
+        padding: 5px; /* Adjusted padding */
+    }
+
+    .planet h3 {
+        font-size: 0.7rem; /* Adjusted planet heading size */
+    }
+
+    .rocket {
+        width: 18px; /* Reduced rocket icon size */
+        height: 18px;
+    }
+
+    .planet-description p {
+        font-size: 0.6rem; /* Adjusted planet description font size */
+        max-width: 260px; /* Adjusted max-width */
+    }
+
+
+    /*SAR*/
+    .orbit-sar {
+        transform: translate(65px, -100px);
+    }
+
+    .orbit-sar-desc .rocket{
+        transform: translate(227px, -130px);
+    }
+
+    .orbit-sar-desc .planet-description{
+        transform: translate(237px, -140px);
+    }
+
+
+
+    /*SAP*/
+    .orbit-sap {
+        transform: translate(168px, 30px);
+    }
+
+    .orbit-sap-desc .rocket{
+        transform: translate(332px, 0px);
+    }
+
+    .orbit-sap-desc .planet-description{
+        transform: translate(341px, -10px);
+    }
+
+
+
+    /*SEP*/
+    .orbit-sep {
+        transform: translate(100px, 200px);
+    }
+
+    .orbit-sep-desc .rocket{
+        transform: translate(265px, 170px);
+    }
+
+    .orbit-sep-desc .planet-description{
+        transform: translate(275px, 165px);
+    }
+}
+
+
+
