@@ -18,7 +18,10 @@
     font-family: 'heading';
     src: url('/fonts/SalisburyBold-PVZXr.ttf') format('truetype');
 }
-
+body
+{
+    overflow-x: hidden;
+}
 /* Header styles */
 .header {
     background-color: #ffffffad;

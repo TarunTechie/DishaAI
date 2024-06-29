@@ -58,7 +58,7 @@ const NEPPolicy = () => {
 
     return (
         <div className="nep-policy-container">
-            <h1>Holistic Student Assessment Program (HSAP)</h1>
+            <h1 className="section">Holistic Student Assessment Program (HSAP)</h1>
             <div className="solar-system">
                 <div className="sun">HSAP</div>
 

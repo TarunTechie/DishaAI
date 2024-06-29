@@ -5,9 +5,9 @@ export default function Appreciations()
 {
 
     return(
-        <div className="grid  w-full bg-white lg:h-screen">
+        <div className="grid w-full bg-white lg:h-screen">
         <h1 className="section">Appreciations</h1>
-        <div className="grid grid-cols-2 mx-auto md:grid lg:grid-cols-3">
+        <div className="grid  mx-auto md:grid lg:grid-cols-3">
             <AppreciationsCard
             name={'Pradyumna'}
             text={`I like how in-depth it was. Not just, "what are you interested in?" but how your personality and personal preferences play into a career fit.`}
