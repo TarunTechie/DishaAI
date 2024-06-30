@@ -8,7 +8,8 @@ import Genesis from './sections/genesis.jsx';
 import PrimeMinister from './sections/primeMinister.jsx';
 import NEPPolicy from './sections/NEPPolicy.jsx';
 import Appreciations from './sections/appreciations.jsx';
-import Differentiator from './sections/differentiator.jsx';
+import Hsap from './sections/hsap.jsx'
+import Differentiator from './sections/differentiator.jsx'
 
 function App() {
     return (
@@ -18,6 +19,7 @@ function App() {
             <Genesis/>
             <PrimeMinister/>
             <NEPPolicy/>
+            <Hsap/>
             <Differentiator/>
             <Appreciations/>
             <Founder/>

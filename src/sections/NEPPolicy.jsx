@@ -3,68 +3,47 @@ import './NEPPolicy.css';
 
 const NEPPolicy = () => {
     useEffect(() => {
-        const handleScroll = () => {
-            const sun = document.querySelector('.sun');
-            const orbitLines = document.querySelectorAll('.orbit-line');
-            const planets = document.querySelectorAll('.planet');
-            const descriptions = document.querySelectorAll('.orbit-sar-desc, .orbit-sap-desc, .orbit-sep-desc');
-
-            // Animate sun size and opacity
-            if (sun && isElementInViewport(sun)) {
-                sun.style.opacity = '1';
-                sun.style.transform = 'translate(-50%, -50%) scale(1)';
-            }
-
-            // Animate orbit lines opacity
-            orbitLines.forEach((orbitLine, index) => {
-                setTimeout(() => {
-                    if (isElementInViewport(orbitLine) && orbitLine.style.opacity !== '1') {
-                        orbitLine.style.opacity = '1';
-                    }
-                }, (index + 1) * 500); // Delay for each orbit line
-            });
-
-            // Animate planets opacity
-            planets.forEach((planet, index) => {
-                setTimeout(() => {
-                    if (isElementInViewport(planet) && planet.style.opacity !== '1') {
-                        planet.style.opacity = '1';
-                    }
-                }, (index + 1) * 1000); // Delay for each planet
-            });
-
-            // Animate descriptions opacity and position
-            descriptions.forEach((description, index) => {
-                setTimeout(() => {
-                    if (isElementInViewport(description) && description.style.opacity !== '1') {
-                        description.style.opacity = '1';
-                        description.style.transform = 'translate(-50%, -50%) scale(1)';
-                    }
-                }, (index + 1) * 1500); // Delay for each description
-            });
-        };
-
-        const isElementInViewport = (el) => {
-            const rect = el.getBoundingClientRect();
-            return (
-                rect.top >= 0 &&
-                rect.left >= 0 &&
-                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-            );
-        };
-
-        window.addEventListener('scroll', handleScroll);
-        handleScroll(); // Trigger once on initial load
-
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
+        animateElements(); // Trigger animation on mount
     }, []);
+
+    const animateElements = () => {
+        const sun = document.querySelector('.sun');
+        const orbitLines = document.querySelectorAll('.orbit-line');
+        const planets = document.querySelectorAll('.planet');
+        const descriptions = document.querySelectorAll('.orbit-sar-desc, .orbit-sap-desc, .orbit-sep-desc');
+
+        // Animate sun size and opacity
+        if (sun) {
+            sun.style.opacity = '1';
+            sun.style.transform = 'translate(-50%, -50%) scale(1)';
+        }
+
+        // Animate orbit lines opacity
+        orbitLines.forEach((orbitLine, index) => {
+            setTimeout(() => {
+                orbitLine.style.opacity = '1';
+            }, (index + 1) * 500); // Delay for each orbit line
+        });
+
+        // Animate planets opacity
+        planets.forEach((planet, index) => {
+            setTimeout(() => {
+                planet.style.opacity = '1';
+            }, (index + 1) * 1000); // Delay for each planet
+        });
+
+        // Animate descriptions opacity and position
+        descriptions.forEach((description, index) => {
+            setTimeout(() => {
+                description.style.opacity = '1';
+                description.style.transform = 'translate(-50%, -50%) scale(1)';
+            }, (index + 1) * 1500); // Delay for each description
+        });
+    };
 
     return (
         <div className="nep-policy-container">
-            <h1 className="section">Holistic Student Assessment Program (HSAP)</h1>
+            <h1>Holistic Student Assessment Program (HSAP)</h1>
             <div className="solar-system">
                 <div className="sun">HSAP</div>
 
