@@ -3,7 +3,7 @@ import Hsap_card from "../components/hsap_card"
 export default function Hsap()
 {
     return(
-        <div className="w-screen overflow-hidden bg-white">
+        <div className="w-screen overflow-hidden bg-white my-10">
             <h1 className="section">HSAP</h1>
             <div className="flex flex-wrap items-stretch text-wrap justify-center gap-5 w-screen">
             <Hsap_card
