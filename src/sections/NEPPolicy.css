@@ -42,7 +42,7 @@
     left: 50%;
     transform: translate(-50%, -50%) scale(0); /* Initial scale to 0 */
     opacity: 0; /* Initially hidden */
-    transition: opacity 2s ease, transform 1s ease;
+    transition: opacity 2s ease, transform 0.5s ease;
 }
 
 .orbit {

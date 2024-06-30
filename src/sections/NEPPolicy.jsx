@@ -16,25 +16,31 @@ const NEPPolicy = () => {
             }
 
             // Animate orbit lines opacity
-            orbitLines.forEach(orbitLine => {
-                if (isElementInViewport(orbitLine) && orbitLine.style.opacity !== '1') {
-                    orbitLine.style.opacity = '1';
-                }
+            orbitLines.forEach((orbitLine, index) => {
+                setTimeout(() => {
+                    if (isElementInViewport(orbitLine) && orbitLine.style.opacity !== '1') {
+                        orbitLine.style.opacity = '1';
+                    }
+                }, (index + 1) * 500); // Delay for each orbit line
             });
 
             // Animate planets opacity
-            planets.forEach(planet => {
-                if (isElementInViewport(planet) && planet.style.opacity !== '1') {
-                    planet.style.opacity = '1';
-                }
+            planets.forEach((planet, index) => {
+                setTimeout(() => {
+                    if (isElementInViewport(planet) && planet.style.opacity !== '1') {
+                        planet.style.opacity = '1';
+                    }
+                }, (index + 1) * 1000); // Delay for each planet
             });
 
             // Animate descriptions opacity and position
-            descriptions.forEach(description => {
-                if (isElementInViewport(description) && description.style.opacity !== '1') {
-                    description.style.opacity = '1';
-                    description.style.transform = 'translate(-50%, -50%) scale(1)';
-                }
+            descriptions.forEach((description, index) => {
+                setTimeout(() => {
+                    if (isElementInViewport(description) && description.style.opacity !== '1') {
+                        description.style.opacity = '1';
+                        description.style.transform = 'translate(-50%, -50%) scale(1)';
+                    }
+                }, (index + 1) * 1500); // Delay for each description
             });
         };
 
