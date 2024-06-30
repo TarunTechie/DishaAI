@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from 'react';
-import './genesis.css';
 
 export default function Genesis() {
     const imageRef = useRef(null);
@@ -13,7 +12,6 @@ export default function Genesis() {
 
                 if (elementTop < windowHeight * 0.75) {
                     setIsLoaded(true);
-                    imageRef.current.classList.add('loaded');
                 }
             }
         };
@@ -26,17 +24,17 @@ export default function Genesis() {
     }, [isLoaded]);
 
     return (
-        <div className="genesis-container bg-blue-900/10">
-            <div className="genesis-content">
+        <div className="min-h-screen flex justify-center items-center overflow-hidden bg-blue-900/10 p-4 sm:p-8 lg:p-12">
+            <div className="flex flex-col items-center lg:flex-row lg:items-start text-left max-w-7xl mx-auto space-y-8 lg:space-y-0 lg:space-x-6 xl:space-x-12">
                 <img
                     src="/images/Genesis.png"
                     alt="Genesis"
-                    className={`genesis-image ${isLoaded ? 'loaded' : ''}`}
+                    className={`w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-[550px] lg:max-h-[550px] mb-4 lg:mb-0 lg:mr-6 xl:mr-12 transition-transform duration-750 ease-in-out ${isLoaded ? 'animate-slideInFloat' : 'opacity-0 -translate-x-[15%]'}`}
                     ref={imageRef}
                 />
-                <div className="genesis-text bg-white/40 rounded-xl md:bg-white/5 md:backdrop-blur">
-                    <h1 className="genesis-heading">Genesis of DISHAᴬᴵ</h1>
-                    <p className="genesis-paragraph">
+                <div className="max-w-xl bg-white/40 rounded-xl md:bg-white/5 md:backdrop-blur p-4 md:p-6 lg:p-8">
+                    <h1 className="text-[#002C46] text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Genesis of DISHAᴬᴵ</h1>
+                    <p className="text-base md:text-lg leading-relaxed text-justify">
                         The last NEP changes happened 28 years ago.
                         In this period, significant changes have taken place in the Indian economy and the world at large.
                         It is in this context that the new NEP wishes to gear India towards the demands of the 21st Century, with Quality,
