@@ -3,34 +3,40 @@ import { Link } from 'react-router-dom';
 
 const Differentiator = () => {
     const [loaded, setLoaded] = useState(false);
+    const sectionRef = useRef(null);
     const textRef = useRef(null);
     const imageRef = useRef(null);
 
     useEffect(() => {
-        setLoaded(true);
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.3 // Adjust threshold as needed
+        };
 
-        const textElement = textRef.current;
-        const imageElement = imageRef.current;
+        const animateOnIntersection = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    setLoaded(true); // Trigger animations
+                    observer.unobserve(entry.target);
+                }
+            });
+        };
 
-        // Slide in animation for text content
-        if (textElement) {
-            textElement.classList.add('animate-slideInLeft');
+        const observer = new IntersectionObserver(animateOnIntersection, observerOptions);
+
+        if (sectionRef.current) {
+            observer.observe(sectionRef.current);
         }
 
-        // Slide in and float animation for image
-        if (imageElement) {
-            imageElement.classList.add('animate-slideInBottom');
-
-            // After slide in, add floating animation
-            setTimeout(() => {
-                imageElement.classList.add('animate-float');
-            }, 750); // Delay to sync with slideInBottom animation duration
-        }
+        return () => {
+            observer.disconnect();
+        };
     }, []);
 
     return (
-        <div className="bg-[#002c46] text-white py-16 px-4 lg:flex lg:justify-between lg:px-32">
-            <div className="max-w-full lg:max-w-[1200px] mx-auto lg:flex lg:items-center lg:space-x-8">
+        <div ref={sectionRef} className="bg-[#002c46] text-white py-16 px-4 lg:flex lg:justify-between lg:px-32">
+            <div className="max-w-full lg:max-w-[1200px] mx-auto lg:flex lg:items-center lg:space-x-16">
                 <div ref={textRef} className={`lg:w-1/2 transform transition-transform duration-1000 ${loaded ? 'translate-x-0 opacity-100' : '-translate-x-20 opacity-0'}`}>
                     <h1 className="text-4xl font-bold mb-4">DISHAᴬᴵ DIFFERENTIATOR</h1>
                     <ul className="pl-5 space-y-4">

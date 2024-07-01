@@ -1,4 +1,4 @@
-export default function Hsap_card({icon,name,dec,color})
+export default function Hsap_sub_card({icon,name,dec,color})
 {
     return(
         <div className={`grid ${color} backdrop-blur justify-center p-8 w-1/3 border-2 border-white rounded-xl text-white my-5 shadow-lg shadow-black/50`}>

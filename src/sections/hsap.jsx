@@ -1,36 +1,134 @@
-import Hsap_card from "../components/hsap_card"
+import React, { useEffect, useRef } from 'react';
+import './hsap.css';
 
-export default function Hsap()
-{
-    return(
-        <div className="w-screen overflow-hidden bg-white my-10">
-            <h1 className="section">HSAP</h1>
-            <div className="flex flex-wrap items-stretch text-wrap justify-center gap-5 w-screen">
-            <Hsap_card
-            icon={"/icons/student.svg"}
-            name={"Student"}
-            color={'bg-[#6e5be8]'}
-            dec={"DISHA's - AI based Student Assessment Report (SAR) will help to build and guide an alignment between what students 'Love to do' and what they 'Want to Achieve'. It assures them that they can build successful careers, based on their passion, irrespective of how unconventional it could be."}
-            />
-            <Hsap_card
-            icon={"/icons/parents.svg"}
-            name={"Parent"}
-            color={'bg-[#f47652]'}
-            dec={"Most of the parents are already DECIDED on their children's career irrespective of their strengths and interests. Our AI system helps to give clarity on what their children strengths and Interests are. It gives information about suitable careers along with the list of subjects, activities and skills which the students can pursue. Parents are urged to explore their children along the recommendations and support them in achieving their aspirations."}
-            />
-            <Hsap_card
-            icon={"/icons/school.svg"}
-            name={"School"}
-            color={'bg-[#5aae5a]'}
-            dec={"NEP helps schools to take a giant leap forward by re-configuring the academic delivery. The pedagogical and curricular restructuring will enable schools to support and guide students per their interests and strengths, identified by SAR. Schools can set up the required resources, infrastructure, and support systems to not only enable students & teachers but also create a niche and a brand in the academic circles. This promotes the school branding and attracts more students, government grants and accreditations."}
-            />
-            <Hsap_card
-            icon={"/icons/teacher.svg"}
-            name={"Teacher"}
-            color={'bg-[#9f52b1]'}
-            dec={"A key focus area of NEP is transforming the 'quality of teaching', where teachers will be empowered to lead the change. SAR identifies a list of subjects where the students need to explore beyond their curriculum and subjects where they need more support. Teachers have a unique opportunity to nurture the students according to the above suggestions, and improve the overall academic performance of the students. This ultimately improves the Teachers performance in the school and among the peers."}
-            />
+
+const Hsap = () => {
+    const sunRef = useRef(null);
+    const orbitLinesRefs = useRef([]);
+    const planetsRefs = useRef([]);
+    const descriptionsRefs = useRef([]);
+
+    useEffect(() => {
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.3 // Adjust intersection threshold as needed
+        };
+
+        const animateOnIntersection = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateElements();
+                    observer.unobserve(entry.target);
+                }
+            });
+        };
+
+        const observer = new IntersectionObserver(animateOnIntersection, observerOptions);
+
+        // Observe sun
+        if (sunRef.current) {
+            observer.observe(sunRef.current);
+        }
+
+        // Observe orbit lines
+        orbitLinesRefs.current.forEach(orbitLine => {
+            observer.observe(orbitLine);
+        });
+
+        // Observe planets
+        planetsRefs.current.forEach(planet => {
+            observer.observe(planet);
+        });
+
+        // Observe descriptions
+        descriptionsRefs.current.forEach(description => {
+            observer.observe(description);
+        });
+
+        return () => {
+            observer.disconnect();
+        };
+    }, []);
+
+    const animateElements = () => {
+        // Animate sun size and opacity
+        if (sunRef.current) {
+            sunRef.current.style.opacity = '1';
+            sunRef.current.style.transform = 'translate(-50%, -50%) scale(1)';
+        }
+
+        // Animate orbit lines opacity
+        orbitLinesRefs.current.forEach((orbitLine, index) => {
+            setTimeout(() => {
+                orbitLine.style.opacity = '1';
+            }, (index + 1) * 200); // Faster speed: 300ms delay
+        });
+
+        // Animate planets opacity
+        planetsRefs.current.forEach((planet, index) => {
+            setTimeout(() => {
+                planet.style.opacity = '1';
+            }, (index + 1) * 500); // Faster speed: 700ms delay
+        });
+
+        // Animate descriptions opacity and position
+        descriptionsRefs.current.forEach((description, index) => {
+            setTimeout(() => {
+                description.style.opacity = '1';
+                description.style.transform = 'translate(-50%, -50%) scale(1)';
+            }, (index + 1) * 500); // Faster speed: 1000ms delay
+        });
+    };
+
+    return (
+        <div className="nep-policy-container">
+            <h1>Holistic Student Assessment Program (HSAP)</h1>
+            <div className="solar-system">
+                <div ref={sunRef} className="sun">HSAP</div>
+
+                <div ref={el => orbitLinesRefs.current.push(el)} className="orbit orbit-sar">
+                    <div ref={el => planetsRefs.current.push(el)} className="planet sar">
+                        <h3>SAR</h3>
+                    </div>
+                </div>
+                <div ref={el => descriptionsRefs.current.push(el)} className="orbit orbit-sar-desc">
+                    <img className="rocket" src="/images/Rocketicon.png" alt="RocketIcon" />
+                    <div className="planet-description">
+                        <p>Student Assessment Report (SAR): Based On Our Decades of Research on Assessments.</p>
+                    </div>
+                </div>
+
+                <div ref={el => orbitLinesRefs.current.push(el)} className="orbit orbit-sap">
+                    <div ref={el => planetsRefs.current.push(el)} className="planet sap">
+                        <h3>SAP</h3>
+                    </div>
+                </div>
+                <div ref={el => descriptionsRefs.current.push(el)} className="orbit orbit-sap-desc">
+                    <img className="rocket" src="/images/Rocketicon.png" alt="RocketIcon" />
+                    <div className="planet-description">
+                        <p>Student Academic Performance (SAP): Yearly Student Academic Performance.</p>
+                    </div>
+                </div>
+
+                <div ref={el => orbitLinesRefs.current.push(el)} className="orbit orbit-sep">
+                    <div ref={el => planetsRefs.current.push(el)} className="planet sep">
+                        <h3>SEP</h3>
+                    </div>
+                </div>
+                <div ref={el => descriptionsRefs.current.push(el)} className="orbit orbit-sep-desc">
+                    <img className="rocket" src="/images/Rocketicon.png" alt="RocketIcon" />
+                    <div className="planet-description">
+                        <p>Student Engagement Platform (SEP): Captures Students Experiences, Observations and Interests In A Seamless Manner on a Regular Basis.</p>
+                    </div>
+                </div>
+
+                <div ref={el => orbitLinesRefs.current.push(el)} className="orbit-line orbit-line-1"></div>
+                <div ref={el => orbitLinesRefs.current.push(el)} className="orbit-line orbit-line-2"></div>
+                <div ref={el => orbitLinesRefs.current.push(el)} className="orbit-line orbit-line-3"></div>
             </div>
         </div>
-    )
-}
+    );
+};
+
+export default Hsap;

@@ -1,23 +1,21 @@
-import React, { useEffect, useRef } from 'react';
-import './NEPPolicy.css';
+import React, { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const NEPPolicy = () => {
-    const sunRef = useRef(null);
-    const orbitLinesRefs = useRef([]);
-    const planetsRefs = useRef([]);
-    const descriptionsRefs = useRef([]);
+    const [loaded, setLoaded] = useState(false);
+    const sectionRef = useRef(null);
 
     useEffect(() => {
         const observerOptions = {
             root: null,
             rootMargin: '0px',
-            threshold: 0.3 // Adjust intersection threshold as needed
+            threshold: 0.3 // Adjust threshold as needed
         };
 
         const animateOnIntersection = (entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    animateElements();
+                    setLoaded(true); // Trigger animations
                     observer.unobserve(entry.target);
                 }
             });
@@ -25,106 +23,42 @@ const NEPPolicy = () => {
 
         const observer = new IntersectionObserver(animateOnIntersection, observerOptions);
 
-        // Observe sun
-        if (sunRef.current) {
-            observer.observe(sunRef.current);
+        if (sectionRef.current) {
+            observer.observe(sectionRef.current);
         }
-
-        // Observe orbit lines
-        orbitLinesRefs.current.forEach(orbitLine => {
-            observer.observe(orbitLine);
-        });
-
-        // Observe planets
-        planetsRefs.current.forEach(planet => {
-            observer.observe(planet);
-        });
-
-        // Observe descriptions
-        descriptionsRefs.current.forEach(description => {
-            observer.observe(description);
-        });
 
         return () => {
             observer.disconnect();
         };
     }, []);
 
-    const animateElements = () => {
-        // Animate sun size and opacity
-        if (sunRef.current) {
-            sunRef.current.style.opacity = '1';
-            sunRef.current.style.transform = 'translate(-50%, -50%) scale(1)';
-        }
-
-        // Animate orbit lines opacity
-        orbitLinesRefs.current.forEach((orbitLine, index) => {
-            setTimeout(() => {
-                orbitLine.style.opacity = '1';
-            }, (index + 1) * 200); // Faster speed: 300ms delay
-        });
-
-        // Animate planets opacity
-        planetsRefs.current.forEach((planet, index) => {
-            setTimeout(() => {
-                planet.style.opacity = '1';
-            }, (index + 1) * 500); // Faster speed: 700ms delay
-        });
-
-        // Animate descriptions opacity and position
-        descriptionsRefs.current.forEach((description, index) => {
-            setTimeout(() => {
-                description.style.opacity = '1';
-                description.style.transform = 'translate(-50%, -50%) scale(1)';
-            }, (index + 1) * 500); // Faster speed: 1000ms delay
-        });
-    };
-
     return (
-        <div className="nep-policy-container">
-            <h1>Holistic Student Assessment Program (HSAP)</h1>
-            <div className="solar-system">
-                <div ref={sunRef} className="sun">HSAP</div>
-
-                <div ref={el => orbitLinesRefs.current.push(el)} className="orbit orbit-sar">
-                    <div ref={el => planetsRefs.current.push(el)} className="planet sar">
-                        <h3>SAR</h3>
+        <div ref={sectionRef} className="bg-[#002c46] text-white py-16 px-4 lg:flex lg:justify-between lg:px-32">
+            <div className="max-w-full lg:max-w-[1200px] mx-auto lg:flex lg:items-center lg:space-x-8">
+                <div className={`lg:w-1/2 transform transition-transform duration-1000 ${loaded ? 'translate-x-0 opacity-100' : '-translate-x-20 opacity-0'}`}>
+                    <p className="text-sm text-gray-300 mb-4">Prime minister's vision as DISHAᴬᴵ mission</p>
+                    <h1 className="text-3xl lg:text-4xl font-bold mb-6 leading-tight">
+                        The new NEP Policy introduces AI to track student progress and guide career choices, alongside younger vocational standards, major-minor subjects, flexible 4-year programs, and a national aptitude test.
+                    </h1>
+                    <Link to="/genesis">
+                        <button className={`py-2 px-6 bg-white text-[#002c46] font-semibold rounded cursor-pointer transform transition-transform duration-1000 ${loaded ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'}`}>
+                            Learn more
+                        </button>
+                    </Link>
+                </div>
+                <div className={`lg:w-1/2 mt-8 lg:mt-0 transform transition-transform duration-1000 ${loaded ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
+                    <div className="aspect-w-16 aspect-h-9">
+                        <iframe
+                            className="w-full h-80 lg:h-90"
+                            src="https://www.youtube.com/embed/6Y_ar5xKS28?si=thAP2ttd4Aa8JfEv"
+                            title="YouTube video player"
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerPolicy="strict-origin-when-cross-origin"
+                            allowFullScreen
+                        ></iframe>
                     </div>
                 </div>
-                <div ref={el => descriptionsRefs.current.push(el)} className="orbit orbit-sar-desc">
-                    <img className="rocket" src="/images/Rocketicon.png" alt="RocketIcon" />
-                    <div className="planet-description">
-                        <p>Student Assessment Report (SAR): Based On Our Decades of Research on Assessments.</p>
-                    </div>
-                </div>
-
-                <div ref={el => orbitLinesRefs.current.push(el)} className="orbit orbit-sap">
-                    <div ref={el => planetsRefs.current.push(el)} className="planet sap">
-                        <h3>SAP</h3>
-                    </div>
-                </div>
-                <div ref={el => descriptionsRefs.current.push(el)} className="orbit orbit-sap-desc">
-                    <img className="rocket" src="/images/Rocketicon.png" alt="RocketIcon" />
-                    <div className="planet-description">
-                        <p>Student Academic Performance (SAP): Yearly Student Academic Performance.</p>
-                    </div>
-                </div>
-
-                <div ref={el => orbitLinesRefs.current.push(el)} className="orbit orbit-sep">
-                    <div ref={el => planetsRefs.current.push(el)} className="planet sep">
-                        <h3>SEP</h3>
-                    </div>
-                </div>
-                <div ref={el => descriptionsRefs.current.push(el)} className="orbit orbit-sep-desc">
-                    <img className="rocket" src="/images/Rocketicon.png" alt="RocketIcon" />
-                    <div className="planet-description">
-                        <p>Student Engagement Platform (SEP): Captures Students Experiences, Observations and Interests In A Seamless Manner on a Regular Basis.</p>
-                    </div>
-                </div>
-
-                <div ref={el => orbitLinesRefs.current.push(el)} className="orbit-line orbit-line-1"></div>
-                <div ref={el => orbitLinesRefs.current.push(el)} className="orbit-line orbit-line-2"></div>
-                <div ref={el => orbitLinesRefs.current.push(el)} className="orbit-line orbit-line-3"></div>
             </div>
         </div>
     );
