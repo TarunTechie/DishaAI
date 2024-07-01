@@ -1,16 +1,15 @@
  /*HSAP page styles*/
 .hsap-container {
     padding: 2rem;
-    height: 150vh;
+    height: 120vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    text-align: left;
 }
 
 .hsap-container h1 {
-    margin: 4rem 0;
     padding: 2rem;
     font-size: 3rem;
     font-weight: 600;
@@ -20,9 +19,10 @@
 .solar-system {
     position: relative;
     width: 100%;
-    height: 100%;
     left: -100px;
-    /*padding: 2rem;*/
+    height: 70%;
+    padding: 2rem;
+
 }
 
 

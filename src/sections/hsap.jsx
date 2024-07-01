@@ -84,7 +84,7 @@ const Hsap = () => {
     return (
         <div className="hsap-container bg-blue-900/10">
             <h1>Holistic Student Assessment Program (HSAP)</h1>
-            <div className="solar-system">
+            <div className="solar-system ">
                 <div ref={sunRef} className="sun">HSAP</div>
 
                 <div ref={el => orbitLinesRefs.current.push(el)} className="orbit orbit-sar">
