@@ -7,8 +7,8 @@ import ReachUs from './sections/reachus.jsx';
 import Genesis from './sections/genesis.jsx';
 import NEPPolicy from './sections/NEPPolicy.jsx';
 import Hsap from './sections/hsap.jsx';
+import Hsap_sub from './sections/hsap_sub.jsx';
 import Appreciations from './sections/appreciations.jsx';
-import Hsap_sub from './sections/hsap_sub.jsx'
 import Differentiator from './sections/differentiator.jsx'
 
 function App() {

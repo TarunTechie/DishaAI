@@ -82,7 +82,7 @@ const Hsap = () => {
     };
 
     return (
-        <div className="nep-policy-container">
+        <div className="hsap-container bg-blue-900/10">
             <h1>Holistic Student Assessment Program (HSAP)</h1>
             <div className="solar-system">
                 <div ref={sunRef} className="sun">HSAP</div>
