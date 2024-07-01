@@ -24,7 +24,7 @@ export default function Genesis() {
     }, [isLoaded]);
 
     return (
-        <div className="min-h-screen flex justify-center items-center overflow-hidden bg-blue-900/10 p-4 sm:p-8 lg:p-12">
+        <div className="min-h-screen flex justify-center items-center overflow-hidden bg-blue-900/10 p-4 sm:p-8 lg:p-8">
             <div className="flex flex-col items-center lg:flex-row lg:items-start text-left max-w-7xl mx-auto space-y-8 lg:space-y-0 lg:space-x-6 xl:space-x-12">
                 <img
                     src="/images/Genesis.png"

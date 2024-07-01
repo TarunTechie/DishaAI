@@ -82,7 +82,7 @@ const Hsap = () => {
     };
 
     return (
-        <div className="hsap-container bg-blue-900/10">
+        <div className="hsap-container">
             <h1>Holistic Student Assessment Program (HSAP)</h1>
             <div className="solar-system ">
                 <div ref={sunRef} className="sun">HSAP</div>

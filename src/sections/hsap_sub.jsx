@@ -3,8 +3,8 @@ import Hsap_sub_card from "../components/hsap_sub_card.jsx"
 export default function Hsap_sub()
 {
     return(
-        <div className="w-screen overflow-hidden bg-white my-10">
-            <div className="flex flex-wrap items-stretch text-wrap justify-center gap-5 w-screen">
+        <div className="w-screen overflow-hidden bg-white bg-opacity-40 pb-28 ">
+            <div className="flex flex-wrap items-stretch text-wrap justify-center gap-10 w-screen">
             <Hsap_sub_card
                 icon={"/icons/student.svg"}
                 name={"Student"}
