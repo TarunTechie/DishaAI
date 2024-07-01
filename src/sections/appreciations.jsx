@@ -5,7 +5,7 @@ export default function Appreciations()
 {
 
     return(
-        <div className="grid w-full bg-white lg:h-screen my-14">
+        <div className="grid w-full bg-white lg:h-screen p-16 ">
         <h1 className="section">Appreciations</h1>
         <div className="grid  mx-auto md:grid lg:grid-cols-3  gap-4">
             <AppreciationsCard

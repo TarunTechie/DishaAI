@@ -35,7 +35,7 @@ const Differentiator = () => {
     }, []);
 
     return (
-        <div ref={sectionRef} className="bg-[#002c46] text-white py-16 px-4 lg:flex lg:justify-between lg:px-32">
+        <div ref={sectionRef} className="bg-[#002c46] text-white py-24 px-4 lg:flex lg:justify-between lg:px-32">
             <div className="max-w-full lg:max-w-[1200px] mx-auto lg:flex lg:items-center lg:space-x-16">
                 <div ref={textRef} className={`lg:w-1/2 transform transition-transform duration-1000 ${loaded ? 'translate-x-0 opacity-100' : '-translate-x-20 opacity-0'}`}>
                     <h1 className="text-4xl font-bold mb-4">DISHAᴬᴵ DIFFERENTIATOR</h1>

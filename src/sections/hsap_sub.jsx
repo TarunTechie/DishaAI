@@ -3,13 +3,13 @@ import Hsap_sub_card from "../components/hsap_sub_card.jsx"
 export default function Hsap_sub()
 {
     return(
-        <div className="w-screen overflow-hidden bg-white my-10">
-            <div className="flex flex-wrap items-stretch text-wrap justify-center gap-5 w-screen">
+        <div className="w-screen overflow-hidden bg-white bg-opacity-40 pb-28 ">
+            <div className="flex flex-wrap items-stretch text-wrap justify-center gap-10 w-screen">
             <Hsap_sub_card
-            icon={"/icons/student.svg"}
-            name={"Student"}
-            color={'bg-[#6e5be8]'}
-            dec={"DISHA's - AI based Student Assessment Report (SAR) will help to build and guide an alignment between what students 'Love to do' and what they 'Want to Achieve'. It assures them that they can build successful careers, based on their passion, irrespective of how unconventional it could be."}
+                icon={"/icons/student.svg"}
+                name={"Student"}
+                color={'bg-[#6e5be8]'}
+                dec={"DISHA's - AI based Student Assessment Report (SAR) will help to build and guide an alignment between what students 'Love to do' and what they 'Want to Achieve'. It assures them that they can build successful careers, based on their passion, irrespective of how unconventional it could be."}
             />
             <Hsap_sub_card
             icon={"/icons/parents.svg"}
