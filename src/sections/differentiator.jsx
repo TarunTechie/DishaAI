@@ -37,7 +37,7 @@ const Differentiator = () => {
     return (
         <div ref={sectionRef} className="bg-[#002c46] text-white py-24 px-4 lg:flex lg:justify-between lg:px-32">
             <div className="max-w-full lg:max-w-[1200px] mx-auto lg:flex lg:items-center lg:space-x-16">
-                <div ref={textRef} className={`lg:w-1/2 transform transition-transform duration-1000 ${loaded ? 'translate-x-0 opacity-100' : '-translate-x-20 opacity-0'}`}>
+                <div ref={textRef} className={`lg:w-1/2 transform transition-transform duration-[2000ms] ease-in-out ${loaded ? 'translate-x-0 opacity-100' : '-translate-x-20 opacity-0'}`}>
                     <h1 className="text-4xl font-bold mb-4">DISHAᴬᴵ DIFFERENTIATOR</h1>
                     <ul className="pl-5 space-y-4">
                         <li className="flex space-x-2">
@@ -77,12 +77,12 @@ const Differentiator = () => {
                         </li>
                     </ul>
                     <Link to="/differentiator">
-                        <button className={`mt-8 py-2 px-6 bg-white text-[#002c46] font-semibold rounded cursor-pointer transform transition-transform duration-1000 ${loaded ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'}`}>
+                        <button className={`mt-8 py-2 px-6 bg-white text-[#002c46] font-semibold rounded cursor-pointer transform transition-transform duration-[2000ms] ease-in-out ${loaded ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'}`}>
                             Learn more
                         </button>
                     </Link>
                 </div>
-                <div ref={imageRef} className={`flex justify-center items-center lg:w-1/2 mt-8 lg:mt-0 ml-0 lg:ml-18 transform transition-transform duration-1000 ${loaded ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
+                <div ref={imageRef} className={`flex justify-center items-center lg:w-1/2 mt-8 lg:mt-0 ml-0 lg:ml-18 transform transition-transform duration-[2000ms] ease-in-out ${loaded ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
                     <img
                         src="/images/Differentiator.png"
                         alt="3D Puzzle"
