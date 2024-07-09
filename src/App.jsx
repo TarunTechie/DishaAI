@@ -10,6 +10,7 @@ import Hsap from './sections/hsap.jsx';
 import Hsap_sub from './sections/hsap_sub.jsx';
 import Appreciations from './sections/appreciations.jsx';
 import Differentiator from './sections/differentiator.jsx'
+import Features from './sections/features.jsx';
 
 function App() {
     return (
@@ -21,8 +22,9 @@ function App() {
             <Hsap/>
             <Hsap_sub/>
             <Differentiator/>
-            <Appreciations/>
+            <Features/>
             <Founder/>
+            <Appreciations/>
             <ReachUs/>
             <Footer/>
         </>
