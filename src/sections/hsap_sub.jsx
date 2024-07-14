@@ -11,7 +11,7 @@ export default function Hsap_sub() {
                     dec={"DISHA's - AI based Student Assessment Report (SAR) will help to build and guide an alignment between what students 'Love to do' and what they 'Want to Achieve'. It assures them that they can build successful careers, based on their passion, irrespective of how unconventional it could be."}
                 />
                 <Hsap_sub_card
-                    icon={"/icons/parents.svg"}
+                    icon={"/images/parents.svg"}
                     name={"Parent"}
                     color={'bg-[#f0706d]'}
                     dec={"Most of the parents are already DECIDED on their children's career irrespective of their strengths and interests. Our AI system helps to give clarity on what their children strengths and Interests are. It gives information about suitable careers along with the list of subjects, activities and skills which the students can pursue. Parents are urged to explore their children along the recommendations and support them in achieving their aspirations."}
